@@ -1,0 +1,108 @@
+.subnav
+    background-color: $subnav-solor
+    display: flex
+    height: 39px
+    &__label
+        border: 2px solid transparent
+        align-items: center
+        transition: border 0.3s ease, margin 0.3s ease
+        cursor: pointer
+        span
+            color: white
+            position: relative
+            bottom: 2px
+            right: 2px
+    &__label:hover
+        border-color: white
+    &__subnav-categorias
+        list-style: none
+        display: flex
+        align-items: center
+        li
+            margin-left: 20px
+            padding: 5px
+            @extend .subnav__label
+        div
+            img
+                margin-left: 20px
+                height: 35px
+                @extend .subnav__label
+
+    #menu
+        display: none
+    #menu-burger
+        width: 20px
+        margin-top: 8.5px
+        margin-left: 10px
+    &__menu
+        z-index: 2
+        position: absolute
+        top: 0
+        left: 0
+        width: 320px
+        height: 100vh
+        background-color: white
+        transform: translateX(-360px) 
+        transition: transform 0.2s ease
+        overflow-y: scroll
+        overflow-x: hidden
+        #label-close
+            #close-icon
+                position: absolute
+                width: 20px
+                left: 320px
+                cursor: pointer
+                margin-top: 15px
+                margin-left: 10px
+        #user-icon
+            position: relative
+            width: 30px
+            top: 15px
+            left: 20px
+    
+    #menu:checked ~ &__menu
+        display: block
+        transform: translate(0px)
+    .subnav__menu__identificate
+        position: relativa
+        width: 320px
+        height: 60px
+        background-color: #232F3E
+        cursor: pointer
+        span
+            color: white
+            position: relative
+            font-weight: bolder
+            font-size: 20px
+            left: 25px
+            top: 6px
+    .subnav__menu__categorias
+        @include texto-categorias
+    &__fondo
+        display: none
+        z-index: 1
+        width: 100%
+        height: 100vh
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgba(0,0,0,0.4)
+
+    #menu:checked ~ &__fondo
+        display: block
+        
+    #label-close
+        position: absolute
+        width: 20px
+        left: 320px
+        cursor: pointer
+        margin-top: 10px
+        margin-left: 5px
+        img
+            position: absolute
+            width: 20px
+            cursor: pointer
+            margin-top: 10px
+            margin-left: 5px
+    &__subnav-categorias
+        color: white

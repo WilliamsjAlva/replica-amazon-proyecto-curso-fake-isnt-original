@@ -1,0 +1,96 @@
+.main
+    background-color: #E3E6E6
+    height: auto
+    background-image: linear-gradient(to top, #E3E6E6,#E3E6E6,#E3E6E6,#E3E6E6,#E3E6E6,#E3E6E6,#E3E6E6,transparent,transparent),url('https://m.media-amazon.com/images/I/71VLgSxeBWL._SX3000_.jpg')
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: 1250px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 20px
+    padding: 250px 0px 60px
+    &__div
+        width: 272px
+        height: 430px
+        background-color: white
+        .main__div__div--ofertas
+            @include main__div--ofertas(22px,40px,300px,22px,180px)
+        .main__div__div--tamano
+            @include main__div--ofertas(17px,40px,280px,22px,200px)
+        &:nth-child(4)
+            background-color: transparent
+            div
+                display: flex
+                flex-direction: column
+                align-items: center
+                height: 150px
+                background-color: white
+                h3
+                    position: relative
+                    overflow-wrap: break-word
+                    word-break: break-word
+                    font-size: 20px
+                    margin: 20px
+                button
+                    cursor: pointer
+                    background-color: #FFD814
+                    border: none
+                    height: 30px
+                    border-radius: 10px
+                    width: 240px
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+                    transition: box-shadow 0.3s ease
+                    &:hover
+                        background-color: #F7CA00
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3)
+                    &:active
+                        background-color: #FEA200
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+            img:nth-child(2)
+                height: 225px
+                margin-top: 56px
+                cursor: pointer
+            p
+                position: absolute
+                font-size: 10px
+                color: gray
+                cursor: pointer
+                right: 60px
+                span
+                    img
+                        height: 10px
+                        position: absolute
+                        margin-left: 2px 
+                &:hover
+                    color: black
+    &__div--categorias
+        display: flex
+        flex-direction: column
+        background-color: white
+        width: 1148px
+        h2
+            position: relative
+            font-size: 22px
+            margin: 20px
+            span
+                margin-left: 6px
+                font-size: 14px
+                font-weight: lighter
+                color: #007185
+                cursor: pointer
+                &:hover
+                    color: #c7511f
+                    text-decoration: underline
+        .img-container
+            overflow-y: hidden
+            width: 100%
+            height: 250px
+            overflow-x: auto
+            white-space: nowrap
+            padding: 10px
+            img
+                cursor: pointer
+                height: 100%
+                margin-right: 10px
+                display: inline-block

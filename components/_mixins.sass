@@ -1,0 +1,101 @@
+@mixin texto-navbar($margin-left-img, $margin-right-img, $top-img, $left, $centrar-vertical: true)
+    position: relative
+    color: white
+    display: flex
+    left: $left
+    div
+        position: relative
+        @if $centrar-vertical
+            top: 50%
+            transform: translateY(-50%)
+            text-align: center
+        p:nth-child(1)
+            font-size: 11px
+            color: #C9C9C9
+        p:nth-child(2)
+            font-size: 13px
+            font-weight: bold
+    img
+        position: relative
+        margin-left: $margin-left-img
+        margin-right: $margin-right-img
+        top: $top-img
+    img
+        position: relative
+        margin-left: $margin-left-img
+        margin-right: $margin-right-img
+        top: $top-img
+
+@mixin texto-categorias()
+    position: absolute
+    h3
+        padding-right: 20px
+        padding-left: 36px
+        padding-top: 15px
+        padding-bottom: 13px
+    li
+        p
+            position: relative
+            padding-right: 20px
+            padding-left: 36px
+            padding-top: 13px
+            padding-bottom: 13px
+            font-size: 14px
+    li:hover
+        background-color: #EAEDED
+        cursor: pointer
+
+@mixin main__div--ofertas($left-img,$top-img,$height-img,$left-p,$tamano-div)
+    cursor: pointer
+    h3
+        overflow-wrap: break-word
+        word-break: break-word
+        position: relative
+        left: 25px
+        top: 20px
+        font-size: 22px
+    img
+        position: relative
+        left: $left-img
+        top: $top-img
+        height: $height-img
+    p
+        position: relative
+        color: #007185
+        font-size: 13px
+        left: $left-p
+        top: 60px
+    &:hover
+        p
+            color: #c7511f
+    div
+        width: $tamano-div
+
+@mixin paises
+    margin-top: 10px
+    ul
+        font-size: 13px
+        max-width: 9000px
+        justify-content: center
+        align-items: center
+        li
+            display: inline-block
+            margin: 0 5px
+            a
+                color: #DDDD
+                text-decoration: none
+                &:hover
+                    text-decoration: underline
+
+@mixin dominios
+        li
+            margin-top: 28px
+            list-style: none
+            max-width: 150px
+            &:hover
+                text-decoration: underline
+            p
+                cursor: pointer
+            span
+                cursor: pointer
+                color: White
